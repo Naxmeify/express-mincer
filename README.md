@@ -21,7 +21,7 @@ pipelineConfig = require './pipeline-config'
 assetPipeline = expressMincer pipelineConfig
 
 app.use assetPipeline.viewHelper()
-app.use '/assets' assetPipeline.server() if app.get('env') is 'production'
+app.use '/assets' assetPipeline.server() unless app.get('env') is 'production'
 ```
 
 *pipeline-config.coffee*
@@ -58,7 +58,7 @@ module.exports =
 
 ### for precompile
 ```
-$ express-mincer precompile path/to/pipeline-config.coffee
+$ express-mincer path/to/pipeline-config.coffee
 ```
 
 ## Configuration
