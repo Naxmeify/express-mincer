@@ -11,7 +11,7 @@ module.exports = (grunt) ->
         growl: false
         env:
           NODE_ENV: 'test'
-          # DEBUG: 'express:mincer*' # activate this only if u wanna see it
+          DEBUG: 'express:mincer*' # activate this only if u wanna see it
       all:
         options:
           files: ['test/**/*.coffee']

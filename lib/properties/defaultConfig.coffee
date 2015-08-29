@@ -1,7 +1,13 @@
-module.exports = 
+module.exports =
+  root: null
+  
   paths: [
   ]
   
+  manifest: null
+  
+  protocol: null
+  host: null
   
   compile: 
     files: [

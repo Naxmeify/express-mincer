@@ -7,9 +7,19 @@ app = express()
 
 pipelineConfig = 
   root: __dirname
+  paths: [
+    'assets'
+    'vendor'
+  ]
   manifest: 'public/assets/manifest.json'
+  
+  protocol: 'https'
+  host: 'my.amazing.cdn.net'
+  
   compile: 
     files: false
+    fonts: true
+    images: true
 
 assetPipeline = expressMincer pipelineConfig
 
